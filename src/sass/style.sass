@@ -15,6 +15,8 @@ $semi-black: #222222
     scroll-behavior: smooth
 b
     font-family: 'Times New Roman', Times, serif
+button
+    outline: none
 a:hover
     text-decoration: none
     color: #000
@@ -206,8 +208,13 @@ a:hover
         @media (max-width: 350px)
             font-size: 10px
 .link-icon
+    &__link
+        color: #fff
+        &:hover
+            svg
+                fill: #666666
     &__user
-        height: 21px
+        height: 24px
         @media (max-width: 1500px)
             height: 18px
         @media (max-width: 575px)

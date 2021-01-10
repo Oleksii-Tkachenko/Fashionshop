@@ -1,7 +1,7 @@
 // webp support
 
 function testWebP(callback) {
-    var webP = new Image();
+    let webP = new Image();
     webP.onload = webP.onerror = function () {
         callback(webP.height == 2);
     };
@@ -57,21 +57,6 @@ class Countdown{
 }
 let countdown1 = new Countdown("timer");
 
-// icons hover
-
-(function(){
-    let image = document.querySelectorAll("[data-image]");
-
-    [...image].forEach((item)=>{
-        let alt = item.getAttribute("alt");
-        item.addEventListener('mouseover', ()=>{
-            item.setAttribute("src", `img/icons/${alt}_alt.svg`);
-        });
-        item.addEventListener('mouseout', ()=>{
-            item.setAttribute("src", `img/icons/${alt}.svg`);
-        });
-    });
-}());
 
 // scroll up
 

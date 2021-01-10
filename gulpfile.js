@@ -136,7 +136,7 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images));
+let build = gulp.series(clean, gulp.parallel(images, js, css, html));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.images = images;
